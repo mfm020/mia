@@ -1,0 +1,29 @@
+# Function to convert a sentence to Pig Latin
+def to_pig_latin(sentence):
+  
+    words = sentence.split(" ")
+    
+    # Initialize the result string
+    result = ""
+    
+   
+        if len(word) == 1:
+            pig_latin_word = word + "ay"
+        
+     
+            pig_latin_word = word[1:] + word[0] + "ay"
+        
+     
+        result += pig_latin_word
+        
+        
+        if word != words[-1]:
+            result += " "
+    
+  
+    return result
+
+
+sentence = "I slept most of the night"
+print("English:", sentence)
+print("Pig Latin:", to_pig_latin(sentence))
